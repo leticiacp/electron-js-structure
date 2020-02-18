@@ -1,0 +1,45 @@
+{
+  "name": "master-electron",
+  "version": "1.0.0",
+  "description": "Master Electron Course Code",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec 'electron .'",
+    "reset": "git reset --hard",
+    "build": "electron-builder -l",
+    "create-cert": "electron-builder create-self-signed-cert -p stackacademytv"
+  },
+  "repository": "https://github.com/stackacademytv/master-electron",
+  "keywords": [
+    "Electron",
+    "Master Electron",
+    "demo"
+  ],
+  "author": "GitHub, Stackacademytv",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^5.0.13",
+    "electron-builder": "^22.3.3",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "electron-window-state": "^5.0.3"
+  },
+  "build": {
+    "appId": "com.stackacademytv.readit",
+    "copyright": "Copyright 2020 Stackacademy.tv",
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "zip",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "stackacademytv"
+    },
+    "linux": {
+      "category": "Utility"
+    }
+  }
+}
